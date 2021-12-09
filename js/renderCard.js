@@ -9,7 +9,7 @@ const renderCard = async (data) => { //** data - массив */
 
     const link = document.createElement('a');
     link.className = 'other-films__link';
-    link.dataset.rating = item.vote_average;
+    if (item.vote_average) link.dataset.rating = item.vote_average;
 
     const img = document.createElement('img');
     img.className = 'other-films__img';

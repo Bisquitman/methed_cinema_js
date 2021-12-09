@@ -12,7 +12,6 @@ const getData = (url) => {
       }
       throw `Что-то пошло не так, ошибка ${response.status}`
     })
-    // .then((data) => console.log(data))
     .catch((error) => console.error(error));
 };
 
