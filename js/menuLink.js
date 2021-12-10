@@ -14,27 +14,27 @@ const menuLink = () => {
 
         filmWeek.style.display = 'none';
         title.textContent = target.textContent;
-
+        // Тренды
         if (target.classList.contains('get-nav__link_triends')) {
           getTrends('all')
             .then((data) => renderCard(data.results));
         }
-
+        // Популярные фильмы
         if (target.classList.contains('get-nav__link_popular-movies')) {
           getPopular('movie')
             .then((data) => renderCard(data.results));
         }
-
+        // Популярные сериалы
         if (target.classList.contains('get-nav__link_popular-tv')) {
           getPopular('tv')
             .then((data) => renderCard(data.results));
         }
-
+        // Топ фильмов
         if (target.classList.contains('get-nav__link_top-movies')) {
           getTop('movie')
             .then((data) => renderCard(data.results));
         }
-
+        // Топ сериалов
         if (target.classList.contains('get-nav__link_top-tv')) {
           getTop('tv')
             .then((data) => renderCard(data.results));
