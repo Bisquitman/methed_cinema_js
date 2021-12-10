@@ -18,12 +18,12 @@ export const getTrends = async (type = 'all', period = 'day', page = 1) => {
   return await getData(url);
 };
 
-export const getPopular = async (type, page = 2) => {
+export const getPopular = async (type, page = 1) => {
   const url = `${BASE_URL}${type}/popular?api_key=${API_KEY}${LANG}&page=${page}`;
   return await getData(url);
 };
 
-export const getTop = async (type, page = 2) => {
+export const getTop = async (type, page = 1) => {
   const url = `${BASE_URL}${type}/top_rated?api_key=${API_KEY}${LANG}&page=${page}`;
   return await getData(url);
 };
