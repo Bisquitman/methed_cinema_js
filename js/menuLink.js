@@ -22,22 +22,22 @@ const menuLink = () => {
         // Популярные фильмы
         if (target.classList.contains('get-nav__link_popular-movies')) {
           getPopular('movie')
-            .then((data) => renderCard(data.results));
+            .then((data) => renderCard(data.results, 'movie'));
         }
         // Популярные сериалы
         if (target.classList.contains('get-nav__link_popular-tv')) {
           getPopular('tv')
-            .then((data) => renderCard(data.results));
+            .then((data) => renderCard(data.results, 'tv'));
         }
         // Топ фильмов
         if (target.classList.contains('get-nav__link_top-movies')) {
           getTop('movie')
-            .then((data) => renderCard(data.results));
+            .then((data) => renderCard(data.results, 'movie'));
         }
         // Топ сериалов
         if (target.classList.contains('get-nav__link_top-tv')) {
           getTop('tv')
-            .then((data) => renderCard(data.results));
+            .then((data) => renderCard(data.results, 'tv'));
         }
 
       }

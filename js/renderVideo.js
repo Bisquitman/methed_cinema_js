@@ -3,8 +3,8 @@ import renderCard from "./renderCard.js";
 
 const filmWeek = document.querySelector('.film-week');
 
-const firstRender = (data, video) => {
-  const { key } = video;
+const firstRender = (data, keyVideo) => {
+  const key = keyVideo?.key;
   const {
     vote_average: voteAverage,
     backdrop_path: backdropPath,

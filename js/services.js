@@ -13,8 +13,7 @@ const getData = (url) => {
     .catch((error) => console.error(error));
 };
 
-
-export const getTrends = async (type = 'all', period = 'day', page = 2) => {
+export const getTrends = async (type = 'all', period = 'day', page = 1) => {
   const url = `${BASE_URL}trending/${type}/${period}?api_key=${API_KEY}${LANG}&page=${page}`;
   return await getData(url);
 };
@@ -36,4 +35,5 @@ export const getVideo = async (id, type) => {
 
 export const search = async (query, page) => {
   const url = `${BASE_URL}search/multi?api_key=${API_KEY}${LANG}&query=${query}&page=${page}&include_adult=false`;
+  return await getData(url);
 };

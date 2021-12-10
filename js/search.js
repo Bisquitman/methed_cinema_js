@@ -28,7 +28,9 @@ const search = () => {
       .catch((err) => {
         console.log('err: ', err);
         title.textContent = err;
-      })
+      });
+
+    searchForm.reset();
   });
 };
 
